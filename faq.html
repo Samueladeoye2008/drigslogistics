@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ- Drigs Roamers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      .faq-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .faq-item {
+        margin-bottom: 20px;
+      }
+      .faq-item h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .faq-item p {
+        font-size: 1.1em;
+        color: #555;
+      }
+    </style>
+</head>
+<body>
+  <header id="faq">
+    <nav class="navbar">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">Drigs Roamers LTD</a>
+                <div class="menu-toggle" id="menu-toggle">
+                 <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> 
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h2 class="section-title" style="font-size:5rem; color:var(--secondary-color);">FAQ</h2>
+        </div>
+  </header>
+  <main>
+    <section id="faq" class="section-container section-bg-alt">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-content">
+        <div class="faq-item">
+          <h3>How do I book a delivery?</h3>
+          <p>You can book a delivery through our website by filling out the booking form or by contacting our customer service team directly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What are your delivery areas?</h3>
+          <p>We provide delivery services across all states in Nigeria, including both local and interstate deliveries.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I track my delivery?</h3>
+          <p>Once your delivery is booked, you will receive a tracking number that you can use to monitor the status of your delivery in real-time on our website.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What types of goods do you transport?</h3>
+          <p>We transport a wide range of goods, including parcels, cargo, bulk freight, and e-commerce products. We also offer specialized handling for sensitive items.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Drigs Roamers Logistics Ltd.</h3>
+                <p>Your reliable partner for fast, secure, and efficient logistics solutions across Nigeria. We are committed to excellence and customer satisfaction.</p>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Drigs Roamers Logistics Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      document.querySelectorAll('.faq-item h3').forEach(item => {
+        item.addEventListener('click', () => {
+          const answer = item.nextElementSibling;
+          answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    </script>
+</body>
+</html>
