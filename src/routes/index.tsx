@@ -20,14 +20,14 @@ import {
 } from "lucide-react";
 
 import fleetGif from "@/assets/drigs-fleet.gif.asset.json";
-import galleryImage from "@/assets/gallery.jpg.asset.json";
-import galleryImageAlt from "@/assets/gallery1.jpg.asset.json";
-import headLogo from "@/assets/headlogo.png.asset.json";
-import heroImage from "@/assets/logisticsheader.jpg.asset.json";
-import truck1 from "@/assets/truck1.jpg.asset.json";
-import truck2 from "@/assets/truck2.jpeg.asset.json";
-import truck3 from "@/assets/truck3.jpeg.asset.json";
-import truck4 from "@/assets/truck4.jpeg.asset.json";
+import galleryImage from "@/assets/gallery.jpg";
+import galleryImageAlt from "@/assets/gallery1.jpg";
+import headLogo from "@/assets/headlogo.png";
+import heroImage from "@/assets/logisticsheader.jpg";
+import truck1 from "@/assets/truck1.jpg";
+import truck2 from "@/assets/truck2.jpeg";
+import truck3 from "@/assets/truck3.jpeg";
+import truck4 from "@/assets/truck4.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,7 +74,7 @@ function HomePage() {
       <header className="kinetic-hero" id="home">
         <nav className={`landing-nav ${menuOpen ? "nav-open" : ""}`}>
           <a className="landing-brand" href="#home" onClick={() => setMenuOpen(false)}>
-            <img src={headLogo.url} alt="Drigs Roamers Logistics" />
+            <img src={headLogo} alt="Drigs Roamers Logistics" />
             <span>DRIGS <strong>ROAMERS</strong><small>LOGISTICS LTD.</small></span>
           </a>
           <button className="nav-toggle" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
@@ -93,7 +93,7 @@ function HomePage() {
             <div className="hero-stats"><div><strong>36</strong><span>States covered</span></div><div><strong>24/7</strong><span>Delivery support</span></div><div><strong>4.9/5</strong><span>Client rating</span></div></div>
           </motion.div>
           <motion.div className="hero-media-wrap" initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.15 }}>
-            <picture className="hero-media"><source media="(max-width: 720px)" srcSet={heroImage.url} /><img src={fleetGif.url} alt="Drigs Roamers trucks moving across Nigeria" /></picture>
+            <picture className="hero-media"><source media="(max-width: 720px)" srcSet={heroImage} /><img src={fleetGif.url} alt="Drigs Roamers trucks moving across Nigeria" /></picture>
             <div className="route-card"><Truck /><div><span>Current route</span><strong>Lagos → Abuja</strong><i><b /></i></div></div>
           </motion.div>
         </div>
@@ -114,7 +114,7 @@ function HomePage() {
         <section className="fleet-band" id="fleet">
           <motion.div className="fleet-copy" {...reveal}><div className="section-kicker">Real fleet. Real routes.</div><h2>Always in motion.</h2><p>From single parcels to commercial cargo, our fleet is ready for the next route.</p><a className="pill-button" href="#contact">Plan a delivery <ArrowRight size={18} /></a></motion.div>
           <div className="fleet-collage">
-            {[truck1, galleryImage, truck2, truck3, truck4, galleryImageAlt].map((image, index) => <motion.figure key={image.url} initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }}><img src={image.url} alt={`Drigs Roamers fleet in operation ${index + 1}`} loading="lazy" /></motion.figure>)}
+            {[truck1, galleryImage, truck2, truck3, truck4, galleryImageAlt].map((image, index) => <motion.figure key={image} initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }}><img src={image} alt={`Drigs Roamers fleet in operation ${index + 1}`} loading="lazy" /></motion.figure>)}
           </div>
         </section>
 
@@ -133,7 +133,7 @@ function HomePage() {
           <motion.form className="quote-form" onSubmit={submit} {...reveal}><label>Name<input name="name" required placeholder="Your name" /></label><label>Phone<input name="phone" required placeholder="+234 ..." /></label><label>Delivery details<textarea name="details" required rows={4} placeholder="Pickup, destination and package details" /></label><button className="pill-button" type="submit">{sent ? <><Check size={18} /> Request received</> : <>Request a quote <ArrowRight size={18} /></>}</button>{sent && <p role="status">Thanks — our team will contact you shortly.</p>}</motion.form>
         </section>
       </main>
-      <footer className="landing-footer"><a className="landing-brand" href="#home"><img src={headLogo.url} alt="Drigs Roamers Logistics" /><span>DRIGS <strong>ROAMERS</strong><small>LOGISTICS LTD.</small></span></a><p>Fast, secure and dependable logistics across Nigeria.</p><span>© 2026 Drigs Roamers Logistics Ltd.</span></footer>
+      <footer className="landing-footer"><a className="landing-brand" href="#home"><img src={headLogo} alt="Drigs Roamers Logistics" /><span>DRIGS <strong>ROAMERS</strong><small>LOGISTICS LTD.</small></span></a><p>Fast, secure and dependable logistics across Nigeria.</p><span>© 2026 Drigs Roamers Logistics Ltd.</span></footer>
     </div>
   );
 }
