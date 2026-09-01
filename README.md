@@ -1,6 +1,6 @@
 # Drigroamers Logistics
 
-A [TanStack Start](https://tanstack.com/start) app built with React 19, Tailwind CSS 4, and shadcn/ui (Radix primitives).
+A [Reacts NextJS](https://reacts.com) app built with React 19, Tailwind CSS 4, and shadcn/ui (Radix primitives).
 
 ## Architecture
 
