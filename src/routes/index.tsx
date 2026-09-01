@@ -19,7 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import fleetGif from "@/assets/drigs-fleet.gif.asset.json";
+import fleetImage from "@/assets/logisticsheader.png";
 import galleryImage from "@/assets/gallery.jpg";
 import galleryImageAlt from "@/assets/gallery1.jpg";
 import headLogo from "@/assets/headlogo.png";
@@ -93,7 +93,7 @@ function HomePage() {
             <div className="hero-stats"><div><strong>36</strong><span>States covered</span></div><div><strong>24/7</strong><span>Delivery support</span></div><div><strong>4.9/5</strong><span>Client rating</span></div></div>
           </motion.div>
           <motion.div className="hero-media-wrap" initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.15 }}>
-            <picture className="hero-media"><source media="(max-width: 720px)" srcSet={heroImage} /><img src={fleetGif.url} alt="Drigs Roamers trucks moving across Nigeria" /></picture>
+            <picture className="hero-media"><source media="(max-width: 720px)" srcSet={heroImage} /><img src={fleetImage} alt="Drigs Roamers trucks moving across Nigeria" /></picture>
             <div className="route-card"><Truck /><div><span>Current route</span><strong>Lagos → Abuja</strong><i><b /></i></div></div>
           </motion.div>
         </div>
